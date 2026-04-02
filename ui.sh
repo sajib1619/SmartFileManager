@@ -25,8 +25,8 @@ zenity --list \
 
 progress_bar() {
 (
-echo "10"; sleep 0.3
-echo "50"; sleep 0.3
+echo "10"; sleep 0.5
+echo "50"; sleep 0.5
 echo "100"
 ) | zenity --progress --title="Processing..." --auto-close
 }

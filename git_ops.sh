@@ -44,13 +44,29 @@ zenity --info --text="Restored"
 
 git_push() {
 folder=$(zenity --file-selection --directory)
-url=$(zenity --entry --text="Repo URL")
+url=$(zenity --entry --title="GitHub Repo URL")
 
-cd "$folder"
-git remote add origin "$url" 2>/dev/null
-git push -u origin main
+cd "$folder" || {
+zenity --error --text="Invalid folder!"
+return
+}
 
-zenity --info --text="Pushed!"
+if [ ! -d ".git" ]; then
+zenity --error --text="Not a Git repository!"
+return
+fi
+
+if git remote | grep -q origin; then
+git remote set-url origin "$url"
+else
+git remote add origin "$url"
+fi
+
+git branch -M main
+
+git push -u origin main > /tmp/push.txt 2>&1
+
+zenity --text-info --title="Push Result" --filename=/tmp/push.txt
 }
 
 git_pull() {
