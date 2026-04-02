@@ -19,3 +19,6 @@
 - Member 3: Git integration
 - Member 4: GitHub sync
 - Member 5: UI + permissions
+
+
+#nothing is added
