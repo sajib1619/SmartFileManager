@@ -12,6 +12,7 @@ zenity --list \
 "Rename File" \
 "Create Folder" \
 "Backup Folder" \
+"Restore Backup" \
 "Change Permission" \
 "Initialize Git Repo" \
 "Git Status" \

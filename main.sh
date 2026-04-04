@@ -3,6 +3,7 @@
 source file_ops.sh
 source git_ops.sh
 source backup.sh
+source restore.sh
 source search.sh
 source permissions.sh
 source ui.sh
@@ -21,6 +22,7 @@ case $choice in
 "Rename File") rename_file ;;
 "Create Folder") create_folder ;;
 "Backup Folder") backup_folder ;;
+"Restore Backup") restore_backup ;;
 "Change Permission") change_permission ;;
 
 "Initialize Git Repo") git_init ;;
