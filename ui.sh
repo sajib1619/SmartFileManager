@@ -2,7 +2,7 @@ main_menu() {
 zenity --list \
 --title="Smart File Manager" \
 --window-icon=folder \
---width=500 --height=500 \
+--width=600 --height=600 \
 --column="Options" \
 "Browse Files" \
 "Search File" \
