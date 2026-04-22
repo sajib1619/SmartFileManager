@@ -76,3 +76,12 @@ cd "$folder"
 git pull origin main
 zenity --info --text="Updated!"
 }
+
+git_clone(){
+folder=$(zenity --file-selection --directory)
+url=$(zenity --entry --title="GitHub Repo URL")
+
+git clone $url
+zenity --info --text="repo cloned successfully!"
+
+}

@@ -15,6 +15,7 @@ zenity --list \
 "Restore Backup" \
 "Change Permission" \
 "Initialize Git Repo" \
+"clone repository" \
 "Git Status" \
 "Commit Changes" \
 "View History" \

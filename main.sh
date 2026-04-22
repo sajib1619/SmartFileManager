@@ -26,6 +26,7 @@ case $choice in
 "Change Permission") change_permission ;;
 
 "Initialize Git Repo") git_init ;;
+"clone repository") git_clone ;;
 "Git Status") git_status ;;
 "Commit Changes") git_commit ;;
 "View History") git_history ;;
